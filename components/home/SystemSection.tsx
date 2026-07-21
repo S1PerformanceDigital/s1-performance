@@ -1,148 +1,72 @@
-import React from "react";
+import React from 'react';
+
+const steps = [
+  {
+    letter: 'D',
+    title: 'Diagnosticar',
+    question: 'Onde estamos hoje?',
+    description: 'Mergulhamos na operação real da sua empresa. Identificamos gargalos, inconsistências e as primeiras oportunidades de ganho rápido (quick wins).'
+  },
+  {
+    letter: 'E',
+    title: 'Estruturar',
+    question: 'Estamos preparados para medir?',
+    description: 'Organizamos processos, integrações, indicadores e a governança dos dados antes de tomar decisões.'
+  },
+  {
+    letter: 'C',
+    title: 'Conectar',
+    question: 'Todas as informações estão conversando entre si?',
+    description: 'Centralizamos os dados e construímos uma visão única da operação. Fim do "cada área com sua própria verdade".'
+  },
+  {
+    letter: 'I',
+    title: 'Interpretar',
+    question: 'O que os dados estão nos dizendo?',
+    description: 'Transformamos dados em insights. Onde o número vira sentido e as prioridades reais ficam evidentes.'
+  },
+  {
+    letter: 'D',
+    title: 'Decidir',
+    question: 'Qual é a próxima decisão que mais gera impacto?',
+    description: 'Definimos ações, responsáveis e metas com base em evidências. Decisão com dono e prazo.'
+  },
+  {
+    letter: 'E',
+    title: 'Evoluir',
+    question: 'O que aprendemos e qual é o próximo nível?',
+    description: 'Executamos, validamos os resultados e iniciamos um novo ciclo. Performance é ritmo.'
+  }
+];
 
 export default function SystemSection() {
-  const steps = [
-    {
-      number: "01",
-      letter: "D",
-      title: "Diagnosticar",
-      desc: "Mapeamos processos, identificamos gargalos e executamos Quick Wins.",
-    },
-    {
-      number: "02",
-      letter: "E",
-      title: "Estruturar",
-      desc: "Organizamos indicadores, metas e processos para criar uma base sólida.",
-    },
-    {
-      number: "03",
-      letter: "C",
-      title: "Conectar",
-      desc: "Integramos todos os sistemas em uma única fonte confiável.",
-    },
-    {
-      number: "04",
-      letter: "I",
-      title: "Interpretar",
-      desc: "Transformamos indicadores em inteligência para apoiar decisões.",
-    },
-    {
-      number: "05",
-      letter: "D",
-      title: "Decidir",
-      desc: "Definimos prioridades e planos de ação baseados em evidências.",
-    },
-    {
-      number: "06",
-      letter: "E",
-      title: "Evoluir",
-      desc: "Acompanhamos resultados e melhoramos continuamente a operação.",
-    },
-  ];
-
   return (
-    <section
-      id="ciclo"
-      className="relative overflow-hidden border-t border-white/5 bg-[#0B1326] py-28"
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(10,132,255,.08),transparent_65%)]" />
-
-      <div className="relative mx-auto max-w-7xl px-6">
-
-        <div className="mx-auto max-w-3xl text-center">
-
-          <span className="text-xs uppercase tracking-[0.35em] text-[#0A84FF] font-semibold">
-            Método Proprietário
-          </span>
-
-          <h2 className="mt-5 text-4xl md:text-6xl font-bold text-white leading-tight">
-            O método por trás
-            <br />
-            do <span className="text-[#0A84FF]">Sistema S1</span>
-          </h2>
-
-          <p className="mt-8 text-lg leading-8 text-slate-400">
-            O Ciclo DECIDE transforma dados em decisões através de um processo
-            contínuo de evolução da operação.
+    <section className="py-20 bg-slate-900 text-white px-4" id="ciclo">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-xs font-semibold text-blue-400 uppercase tracking-widest">A METODOLOGIA S1</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2">Conheça o Ciclo DECIDE</h2>
+          <p className="mt-4 text-gray-400">
+            Seis etapas. Um ciclo contínuo. Resultado desde o primeiro passo.
           </p>
-
         </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-          {steps.map((step) => (
-
-            <div
-              key={step.title}
-              className="group rounded-[28px] border border-white/10 bg-[#111C2E]/70 p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#0A84FF]/40"
-            >
-
-              <div className="flex items-center justify-between">
-
-                <span className="text-xs tracking-[0.3em] text-slate-500">
-                  {step.number}
-                </span>
-
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A84FF]/15 text-xl font-bold text-[#0A84FF]">
-                  {step.letter}
-                </div>
-
-              </div>
-
-              <h3 className="mt-6 text-2xl font-semibold text-white">
-                {step.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-400">
-                {step.desc}
-              </p>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl relative">
+              <span className="text-4xl font-black text-blue-500/30 absolute top-4 right-4">{step.letter}</span>
+              <h3 className="text-xl font-bold text-white">{step.title}</h3>
+              <p className="text-sm text-blue-400 italic my-2">{step.question}</p>
+              <p className="text-gray-300 text-sm mt-3">{step.description}</p>
             </div>
-
           ))}
-
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-4 text-center">
-
-          {["Dados", "Clareza", "Decisão", "Execução", "Performance"].map(
-            (item, index) => (
-              <React.Fragment key={item}>
-                <div className="rounded-full border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-5 py-3 text-sm font-medium text-white">
-                  {item}
-                </div>
-
-                {index < 4 && (
-                  <span className="text-[#0A84FF] text-xl">→</span>
-                )}
-              </React.Fragment>
-            )
-          )}
-
+        <div className="mt-12 text-center">
+          <blockquote className="text-xl font-semibold text-gray-200 italic">
+            "O Sistema S1 existe para que sua empresa DECIDA com confiança."
+          </blockquote>
         </div>
-
-        <div className="mt-20 rounded-[32px] border border-[#0A84FF]/20 bg-gradient-to-br from-[#111C2E] to-[#0B1326] p-10 text-center">
-
-          <span className="text-xs uppercase tracking-[0.35em] text-[#0A84FF]">
-            Filosofia S1
-          </span>
-
-          <h3 className="mt-5 text-3xl md:text-5xl font-bold leading-tight text-white">
-            Toda empresa gera dados.
-            <br />
-            <span className="text-[#0A84FF]">
-              Poucas sabem transformá-los em crescimento.
-            </span>
-          </h3>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
-            O Ciclo DECIDE conecta pessoas, processos, tecnologia e Inteligência
-            Artificial para transformar dados em clareza, clareza em decisões e
-            decisões em performance.
-          </p>
-
-        </div>
-
       </div>
     </section>
   );

@@ -1,129 +1,43 @@
-import React from "react";
-import SystemPreview from "./SystemPreview";
+import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0B1326] pt-36 pb-28">
+    <section className="relative pt-28 md:pt-36 pb-20 px-4 max-w-7xl mx-auto text-center overflow-hidden">
+      {/* Luzes de Fundo / Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-[#0A84FF]/15 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* Background */}
+      <div className="relative z-10">
+        {/* Eyebrow */}
+        <span className="inline-block text-xs md:text-sm font-semibold tracking-widest text-[#0A84FF] uppercase bg-[#0A84FF]/10 border border-[#0A84FF]/20 px-4 py-1.5 rounded-full">
+          SISTEMA S1 · PERFORMANCE E TRANSFORMAÇÃO DIGITAL
+        </span>
 
-      <div className="absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#0A84FF]/10 blur-[180px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(10,132,255,0.06),transparent_65%)]" />
-      </div>
+        {/* H1 Headline */}
+        <h1 className="mt-8 text-4xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+          Todo dia sua empresa toma dezenas de decisões. <span className="text-[#0A84FF]">Quantas delas são um chute?</span>
+        </h1>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+        {/* Subheadline */}
+        <p className="mt-6 text-base md:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+          Vendedor, produto, canal, unidade: em algum lugar da sua operação, alguém está decidindo agora com base em achismo — porque o dado existe, mas está espalhado, atrasado ou não conversa com o resto. A S1 conecta o que sua empresa já tem e transforma isso em decisão certa, todos os dias.
+        </p>
 
-        <div className="grid lg:grid-cols-12 gap-20 items-center">
-
-          {/* Conteúdo */}
-
-          <div className="lg:col-span-6">
-
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.30em] text-[#0A84FF]">
-
-              Sistema S1 • Ciclo DECIDE
-
-            </div>
-
-            <h1 className="mt-8 text-5xl md:text-7xl font-black tracking-tight leading-[1.02] text-white">
-
-              Toda empresa
-              <br />
-
-              gera dados.
-
-              <span className="block mt-3 text-[#0A84FF]">
-                Poucas sabem transformá-los em crescimento.
-              </span>
-
-            </h1>
-
-            <p className="mt-8 max-w-xl text-lg md:text-xl leading-8 text-slate-400">
-
-              A S1 conecta processos, pessoas, tecnologia e Inteligência
-              Artificial para transformar informações dispersas em decisões
-              estratégicas. Com o <strong className="text-white">Sistema S1</strong> e o
-              <strong className="text-[#0A84FF]"> Ciclo DECIDE</strong>, sua empresa
-              evolui com mais previsibilidade, eficiência e performance.
-
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-
-              <a
-                href="#contato"
-                className="rounded-2xl bg-[#0A84FF] px-8 py-4 text-sm font-semibold text-white shadow-[0_20px_60px_rgba(10,132,255,.30)] transition-all duration-300 hover:scale-105 hover:bg-[#0077EB]"
-              >
-                Solicitar Diagnóstico
-              </a>
-
-              <a
-                href="#ciclo"
-                className="rounded-2xl border border-white/10 px-8 py-4 text-sm font-semibold text-white transition-all hover:border-[#0A84FF]/40 hover:bg-white/5"
-              >
-                Conhecer o Ciclo DECIDE
-              </a>
-
-            </div>
-
-            {/* Barra de confiança */}
-
-            <div className="mt-14 border-t border-white/10 pt-8">
-
-              <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
-
-                O Sistema S1 conecta toda a sua operação
-
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-3">
-
-                {[
-                  "CRM",
-                  "ERP",
-                  "Financeiro",
-                  "Marketing",
-                  "WhatsApp",
-                  "Google Ads",
-                  "Meta Ads",
-                  "Dashboards",
-                  "IA"
-                ].map((item) => (
-
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
-                  >
-                    {item}
-                  </span>
-
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Sistema */}
-
-          <div className="relative lg:col-span-6">
-
-            <div className="absolute inset-0 rounded-[40px] bg-[#0A84FF]/15 blur-3xl scale-90" />
-
-            <div className="relative lg:translate-x-10 lg:scale-[1.08]">
-
-              <SystemPreview />
-
-            </div>
-
-          </div>
-
+        {/* CTAs */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#diagnostico"
+            className="w-full sm:w-auto px-8 py-4 bg-[#0A84FF] hover:bg-[#0A84FF]/90 text-white font-bold rounded-xl shadow-lg shadow-[#0A84FF]/25 hover:scale-105 transition-all text-base md:text-lg flex items-center justify-center gap-2"
+          >
+            Pedir meu Diagnóstico S1
+            <span>→</span>
+          </a>
         </div>
 
+        {/* Microcopy / CTA secundário */}
+        <p className="mt-4 text-xs md:text-sm text-slate-400 font-medium">
+          Sem enrolação. 20 minutos para descobrir onde sua empresa está perdendo dinheiro sem ninguém perceber.
+        </p>
       </div>
-
     </section>
   );
 }

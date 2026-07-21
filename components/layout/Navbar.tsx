@@ -24,24 +24,17 @@ export default function Navbar() {
           </div>
 
           <div className="leading-tight">
-            <h2 className="text-base font-semibold text-white tracking-wide">
-              S1 Performance
+            <h2 className="text-base font-bold text-white tracking-wide">
+              S1 <span className="text-[#0A84FF] font-light">Performance</span>
             </h2>
-            <p className="text-xs text-slate-400 font-medium">
-              Transformação Digital
+            <p className="text-[11px] text-slate-400 font-medium tracking-wider uppercase">
+              Sistema de Decisão
             </p>
           </div>
         </a>
 
         {/* Menu Desktop */}
         <nav className="hidden items-center gap-8 lg:flex">
-          <a
-            href="#problema"
-            className="text-sm font-medium text-slate-300 transition hover:text-[#0A84FF]"
-          >
-            O Problema
-          </a>
-
           <a
             href="#ciclo"
             className="text-sm font-medium text-slate-300 transition hover:text-[#0A84FF]"
@@ -50,10 +43,10 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#tecnologia"
+            href="#porque-s1"
             className="text-sm font-medium text-slate-300 transition hover:text-[#0A84FF]"
           >
-            Tecnologia & IA
+            Por que a S1
           </a>
 
           <a
@@ -62,16 +55,22 @@ export default function Navbar() {
           >
             Resultados
           </a>
+
+          <a
+            href="#faq"
+            className="text-sm font-medium text-slate-300 transition hover:text-[#0A84FF]"
+          >
+            FAQ
+          </a>
         </nav>
 
         {/* Ações / CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="#contato"
+            href="#diagnostico"
             className="group flex items-center gap-2 rounded-xl bg-[#0A84FF] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-[#2494ff] hover:shadow-[0_0_25px_rgba(10,132,255,.45)]"
           >
-            <span>Diagnóstico</span>
-            <span className="hidden sm:inline">Operacional</span>
+            <span>Pedir Diagnóstico</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
@@ -93,13 +92,6 @@ export default function Navbar() {
         <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-[#08111F]/95 p-6 backdrop-blur-2xl lg:hidden shadow-2xl">
           <nav className="flex flex-col gap-4">
             <a
-              href="#problema"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-medium text-slate-300 hover:text-[#0A84FF]"
-            >
-              O Problema
-            </a>
-            <a
               href="#ciclo"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-slate-300 hover:text-[#0A84FF]"
@@ -107,11 +99,11 @@ export default function Navbar() {
               Ciclo DECIDE®
             </a>
             <a
-              href="#tecnologia"
+              href="#porque-s1"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-medium text-slate-300 hover:text-[#0A84FF]"
             >
-              Tecnologia & IA
+              Por que a S1
             </a>
             <a
               href="#resultados"
@@ -119,6 +111,13 @@ export default function Navbar() {
               className="text-sm font-medium text-slate-300 hover:text-[#0A84FF]"
             >
               Resultados
+            </a>
+            <a
+              href="#faq"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-slate-300 hover:text-[#0A84FF]"
+            >
+              FAQ
             </a>
           </nav>
         </div>

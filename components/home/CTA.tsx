@@ -11,17 +11,18 @@ export default function CTA() {
           
           {/* Badge */}
           <span className="inline-block px-4 py-1.5 rounded-full border border-[#0A84FF]/30 bg-[#0A84FF]/10 text-[#0A84FF] text-xs font-semibold uppercase tracking-widest mb-6">
-            Transformação Operacional
+            O Próximo Passo
           </span>
 
           {/* Título Principal */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Vamos implantar o <span className="text-[#0A84FF]">Sistema S1®</span> na sua empresa?
+            Empresas orientadas por opinião crescem por acaso. <br className="hidden md:inline" />
+            <span className="text-[#0A84FF]">As orientadas por dados crescem com previsibilidade.</span>
           </h2>
 
-          {/* Subtítulo / Tese */}
-          <p className="mt-6 text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Empresas orientadas por opinião crescem por acaso. Empresas orientadas por dados crescem por estratégia. Agende um diagnóstico inicial e descubra os gargalos da sua operação.
+          {/* Subtítulo / Provocação */}
+          <p className="mt-6 text-slate-300 text-base md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            Qual das duas você quer ser daqui a 12 meses?
           </p>
 
           {/* Botões de Ação */}
@@ -30,33 +31,38 @@ export default function CTA() {
               href="https://wa.me/5519996882663?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o%20com%20a%20S1."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#0A84FF] hover:bg-[#0A84FF]/90 text-white font-semibold text-sm transition-all shadow-lg shadow-[#0A84FF]/30 hover:scale-105 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#0A84FF] hover:bg-[#0A84FF]/90 text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#0A84FF]/30 hover:scale-105 flex items-center justify-center gap-2"
             >
-              Solicitar Diagnóstico Operational
+              Solicitar Diagnóstico
             </a>
 
             <a
               href="https://wa.me/5519996882663?text=Ol%C3%A1!%20Acabei%20de%20acessar%20o%20site%20da%20S1%20e%20gostaria%20de%20conversar%20com%20um%20especialista%20para%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20a%20minha%20empresa."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2"
             >
-              Falar com um Consultor
+              Falar com um Especialista
             </a>
           </div>
+
+          {/* Microcopy de Baixo Atrito */}
+          <p className="mt-4 text-xs text-slate-400 font-medium">
+            ⚡ 20 minutos. Sem compromisso. Só clareza.
+          </p>
 
           {/* Destaques do Processo */}
           <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <div>
-              <p className="text-xs text-slate-400 uppercase tracking-wider">Etapa 1</p>
-              <p className="text-sm font-semibold text-white mt-1">Diagnóstico Sem Compromisso</p>
+              <p className="text-xs text-slate-400 uppercase tracking-wider">Passo 1</p>
+              <p className="text-sm font-semibold text-white mt-1">Mapeamento da Operação</p>
             </div>
             <div>
-              <p className="text-xs text-slate-400 uppercase tracking-wider">Etapa 2</p>
+              <p className="text-xs text-slate-400 uppercase tracking-wider">Passo 2</p>
               <p className="text-sm font-semibold text-white mt-1">Identificação de Quick Wins</p>
             </div>
             <div>
-              <p className="text-xs text-slate-400 uppercase tracking-wider">Etapa 3</p>
+              <p className="text-xs text-slate-400 uppercase tracking-wider">Passo 3</p>
               <p className="text-sm font-semibold text-white mt-1">Plano do Ciclo DECIDE®</p>
             </div>
           </div>

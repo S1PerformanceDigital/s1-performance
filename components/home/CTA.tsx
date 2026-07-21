@@ -27,7 +27,7 @@ export default function CTA() {
           {/* Botões de Ação */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o%20com%20a%20S1."
+              href="https://wa.me/5519996882663?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o%20com%20a%20S1."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#0A84FF] hover:bg-[#0A84FF]/90 text-white font-semibold text-sm transition-all shadow-lg shadow-[#0A84FF]/30 hover:scale-105 flex items-center justify-center gap-2"
@@ -36,7 +36,7 @@ export default function CTA() {
             </a>
 
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5519996882663?text=Ol%C3%A1!%20Acabei%20de%20acessar%20o%20site%20da%20S1%20e%20gostaria%20de%20conversar%20com%20um%20especialista%20para%20entender%20como%20voc%C3%AAs%20podem%20ajudar%20a%20minha%20empresa."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"

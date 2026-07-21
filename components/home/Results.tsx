@@ -1,87 +1,54 @@
-const results = [
-  {
-    value: "+38%",
-    title: "Eficiência Operacional",
-    description:
-      "Menos tempo procurando informações e mais tempo tomando decisões.",
-  },
-  {
-    value: "-62%",
-    title: "Retrabalho",
-    description:
-      "Processos automatizados reduzem atividades repetitivas e erros.",
-  },
-  {
-    value: "100%",
-    title: "Visão Integrada",
-    description:
-      "Marketing, vendas, financeiro e operação trabalhando com os mesmos dados.",
-  },
-  {
-    value: "24/7",
-    title: "Monitoramento",
-    description:
-      "Indicadores disponíveis em tempo real para toda a liderança.",
-  },
-];
+import React from "react";
 
-export default function Results() {
+export default function Stats() {
+  const metrics = [
+    {
+      title: "Receita Operacional",
+      value: "+38%",
+      desc: "Crescimento previsível e escalável",
+    },
+    {
+      title: "Redução de Retrabalho",
+      value: "-62%",
+      desc: "Eficiência e processos otimizados",
+    },
+    {
+      title: "Visibilidade de Dados",
+      value: "100%",
+      desc: "Fonte única e confiável de informação",
+    },
+    {
+      title: "Decisões Guiadas por IA",
+      value: "24/7",
+      desc: "Monitoramento e alertas contínuos",
+    },
+  ];
+
   return (
-    <section className="bg-[#08111F] py-32">
-
-      <div className="mx-auto max-w-7xl px-8">
-
-        <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-5 py-2 text-sm font-medium text-[#49A6FF]">
-            O resultado da implantação
+    <section className="py-20 bg-[#0B1326] border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#0A84FF] font-semibold">
+            Resultados Reais
           </span>
-
-          <h2 className="mt-8 text-5xl font-bold leading-tight text-white">
-            Quando todos os dados
-            <span className="block text-[#0A84FF]">
-              trabalham juntos,
-            </span>
-
-            sua empresa evolui mais rápido.
+          <h2 className="mt-2 text-3xl font-bold text-white">
+            Quando todos os dados trabalham juntos, sua empresa evolui mais rápido.
           </h2>
-
-          <p className="mt-8 text-xl leading-9 text-white/60">
-            O Sistema S1® elimina silos de informação e transforma dados em uma
-            vantagem competitiva para toda a empresa.
-          </p>
-
         </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2">
-
-          {results.map((item) => (
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {metrics.map((m) => (
             <div
-              key={item.title}
-              className="group rounded-3xl border border-white/10 bg-white/5 p-10 transition-all duration-300 hover:-translate-y-2 hover:border-[#0A84FF]/30 hover:bg-white/[0.08]"
+              key={m.title}
+              className="p-6 rounded-3xl border border-white/10 bg-[#111C2E]/60 text-center"
             >
-
-              <span className="text-6xl font-bold tracking-tight text-[#49A6FF]">
-                {item.value}
-              </span>
-
-              <h3 className="mt-6 text-2xl font-semibold text-white">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 text-lg leading-8 text-white/60">
-                {item.description}
-              </p>
-
+              <h3 className="text-4xl font-extrabold text-[#0A84FF]">{m.value}</h3>
+              <p className="mt-2 text-sm font-semibold text-white">{m.title}</p>
+              <p className="mt-1 text-xs text-slate-400">{m.desc}</p>
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

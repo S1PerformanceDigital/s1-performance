@@ -1,97 +1,84 @@
-const steps = [
-  {
-    letter: "D",
-    title: "Diagnosticar",
-    description:
-      "Entendemos o cenário atual da empresa e identificamos os principais gargalos.",
-  },
-  {
-    letter: "E",
-    title: "Estruturar",
-    description:
-      "Organizamos indicadores, processos e metas para criar uma base sólida.",
-  },
-  {
-    letter: "C",
-    title: "Conectar",
-    description:
-      "Integramos todas as fontes de dados em um único ecossistema.",
-  },
-  {
-    letter: "I",
-    title: "Interpretar",
-    description:
-      "Transformamos dados em insights acionáveis para a gestão.",
-  },
-  {
-    letter: "D",
-    title: "Decidir",
-    description:
-      "Apoiamos decisões com clareza, previsibilidade e prioridade.",
-  },
-  {
-    letter: "E",
-    title: "Evoluir",
-    description:
-      "Medimos resultados e refinamos continuamente o sistema.",
-  },
-];
+import React from "react";
 
 export default function SystemSection() {
+  const steps = [
+    {
+      letter: "D",
+      title: "Diagnosticar",
+      desc: "Compreender completamente a operação, mapear processos, gargalos e aplicar Quick Wins de alto impacto.",
+      highlight: "Visão clara do cenário atual",
+    },
+    {
+      letter: "E",
+      title: "Estruturar",
+      desc: "Definir KPIs, metas, processos, governança e preparar a infraestrutura para métricas confiáveis.",
+      highlight: "Operação pronta para medir",
+    },
+    {
+      letter: "C",
+      title: "Conectar",
+      desc: "Centralizar dados do CRM, ERP, Ads e WhatsApp em uma única fonte confiável de informação.",
+      highlight: "Fim das ilhas de informação",
+    },
+    {
+      letter: "I",
+      title: "Interpretar",
+      desc: "Transformar números brutos em hipóteses e inteligência para descobrir o que impede o crescimento.",
+      highlight: "Dados transformados em insights",
+    },
+    {
+      letter: "D",
+      title: "Decidir",
+      desc: "Plano de ação estratégico com responsáveis, prioridades e metas claras sustentadas por evidências.",
+      highlight: "Decisões rápidas e seguras",
+    },
+    {
+      letter: "E",
+      title: "Evoluir",
+      desc: "Executar, medir impacto/ROI e aprender continuamente para reiniciar o ciclo em um patamar superior.",
+      highlight: "Crescimento sustentável",
+    },
+  ];
+
   return (
-    <section className="bg-[#08111F] py-32">
-
-      <div className="mx-auto max-w-7xl px-8">
-
-        <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-5 py-2 text-sm font-medium text-[#49A6FF]">
-            Sistema S1®
+    <section className="py-24 bg-[#0B1326] relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#0A84FF] font-semibold">
+            Metodologia Proprietária
           </span>
-
-          <h2 className="mt-8 text-5xl font-bold leading-tight text-white">
-            Um sistema para transformar
-            <span className="block text-[#0A84FF]">
-              dados em decisões.
-            </span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white tracking-tight">
+            O Ciclo <span className="text-[#0A84FF]">DECIDE®</span>
           </h2>
-
-          <p className="mt-8 text-xl leading-9 text-white/60">
-            O Sistema S1 é implantado dentro da operação da empresa e segue um
-            processo contínuo de evolução chamado <strong className="text-white">Ciclo DECIDE®</strong>.
+          <p className="mt-4 text-slate-400 text-base md:text-lg">
+            Um sistema permanente de evolução para garantir que toda decisão importante seja respaldada por dados confiáveis.
           </p>
-
         </div>
 
-        <div className="mt-24 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {steps.map((step) => (
-
             <div
-              key={step.title}
-              className="group rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#0A84FF]/30 hover:bg-white/[0.07]"
+              key={step.letter + step.title}
+              className="relative p-6 rounded-3xl border border-white/10 bg-[#111C2E] hover:border-[#0A84FF]/40 transition-all duration-300 group hover:-translate-y-1 shadow-xl"
             >
-
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0A84FF]/10 text-2xl font-bold text-[#49A6FF]">
-                {step.letter}
+              <div className="flex items-center justify-between mb-4">
+                <span className="w-10 h-10 rounded-xl bg-[#0A84FF]/15 border border-[#0A84FF]/30 text-[#0A84FF] font-bold text-xl flex items-center justify-center">
+                  {step.letter}
+                </span>
+                <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                  {step.highlight}
+                </span>
               </div>
-
-              <h3 className="mt-6 text-2xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white group-hover:text-[#0A84FF] transition-colors">
                 {step.title}
               </h3>
-
-              <p className="mt-4 leading-8 text-white/60">
-                {step.description}
+              <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                {step.desc}
               </p>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

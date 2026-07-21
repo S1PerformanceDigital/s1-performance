@@ -1,99 +1,47 @@
-const sources = [
-  "Meta Ads",
-  "Google Ads",
-  "CRM",
-  "ERP",
-  "Financeiro",
-  "Comercial",
-  "Marketplace",
-  "WhatsApp",
-  "IA",
-];
+import React from "react";
 
-export default function DataFlow() {
+export default function Problems() {
+  const tools = [
+    { name: "CRM", color: "from-[#0A84FF]/20 to-[#0A84FF]/5" },
+    { name: "ERP", color: "from-blue-600/20 to-blue-600/5" },
+    { name: "WhatsApp", color: "from-emerald-500/20 to-emerald-500/5" },
+    { name: "Meta Ads", color: "from-blue-500/20 to-blue-500/5" },
+    { name: "Google Ads", color: "from-amber-500/20 to-amber-500/5" },
+    { name: "Planilhas", color: "from-emerald-600/20 to-emerald-600/5" },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-[#0B1326] py-32">
-
-      <div className="mx-auto max-w-7xl px-8">
-
-        <div className="mx-auto max-w-4xl text-center">
-
-          <span className="rounded-full border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-5 py-2 text-sm font-medium text-[#49A6FF]">
-            O desafio das empresas
+    <section className="relative py-24 bg-[#090F1E] border-t border-white/5 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#0A84FF] font-semibold">
+            O Problema Real
           </span>
-
-          <h2 className="mt-8 text-5xl font-bold leading-tight text-white">
-
-            Toda empresa gera
-            <span className="block text-[#0A84FF]">
-              dados.
-            </span>
-
-            <span className="mt-4 block">
-              Poucas conseguem transformá-los em decisões.
-            </span>
-
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white tracking-tight">
+            Toda empresa gera <span className="text-[#0A84FF]">dados</span>. O problema são as ilhas de informação.
           </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-white/60">
-            Informações espalhadas geram retrabalho, desperdício e decisões
-            lentas. O Sistema S1 organiza tudo isso em uma única visão para que
-            sua empresa cresça com previsibilidade.
+          <p className="mt-4 text-slate-400 text-base md:text-lg">
+            Sua operação possui diversas ferramentas separadas. Sem conexão, elas geram decisões lentas, desperdício de dinheiro, retrabalho e falta de previsibilidade.
           </p>
-
         </div>
 
-        <div className="mt-20 flex flex-wrap items-center justify-center gap-4">
-
-          {sources.map((source) => (
+        {/* Mapeamento Visual de Ferramentas Desconectadas */}
+        <div className="mt-12 relative flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto p-8 rounded-3xl border border-white/10 bg-[#0E172A]/60 backdrop-blur-md">
+          {tools.map((tool) => (
             <div
-              key={source}
-              className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-white/80 transition hover:border-[#0A84FF]/30 hover:bg-white/10"
+              key={tool.name}
+              className={`px-5 py-3 rounded-2xl border border-white/10 bg-gradient-to-b ${tool.color} text-white font-medium text-sm shadow-lg backdrop-blur-sm transition-transform hover:scale-105`}
             >
-              {source}
+              {tool.name}
             </div>
           ))}
-
+          <div className="w-full mt-4 text-center">
+            <span className="text-xs text-slate-500 uppercase tracking-widest">
+              Sistemas Isolados = Visão Incompleta
+            </span>
+          </div>
         </div>
-
-        <div className="mt-16 flex flex-col items-center">
-
-          <div className="text-5xl text-[#0A84FF]">
-            ↓
-          </div>
-
-          <div className="mt-6 rounded-3xl border border-[#0A84FF]/20 bg-[#0A84FF]/10 px-10 py-8">
-
-            <p className="text-sm uppercase tracking-[0.3em] text-[#49A6FF]">
-              Sistema S1®
-            </p>
-
-            <h3 className="mt-3 text-3xl font-bold text-white">
-              Ciclo DECIDE®
-            </h3>
-
-          </div>
-
-          <div className="mt-6 text-5xl text-[#0A84FF]">
-            ↓
-          </div>
-
-          <div className="mt-6 text-center">
-
-            <h3 className="text-4xl font-bold text-white">
-              Decisões Inteligentes
-            </h3>
-
-            <p className="mt-4 text-lg text-white/60">
-              Crescimento previsível começa com decisões baseadas em dados.
-            </p>
-
-          </div>
-
-        </div>
-
       </div>
-
     </section>
   );
 }
